@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/medixco1</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">pursuitproject@</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+         <property name="hibernate.connection.autocommit">true</property>
+         <property name="hibernate.current_session_context_class">thread</property>
+
+        <mapping class="com.Entities.Customer"/>
+        <mapping class="com.Entities.Address"/>
+         <mapping class="com.Entities.Shop"/>
+        <mapping class="com.Entities.OrderMed"/>
+        <mapping class="com.Entities.Main"/>
+         <mapping class="com.Entities.DeliveryPartner"/>
+         <mapping class="com.Entities.Confirmation"/>
+        <mapping class="com.Entities.Medicine"/>
+         <mapping class="com.Entities.Stock"/>
+        <mapping class="com.Entities.Feedback"/>
+
+    </session-factory>
+</hibernate-configuration>
